@@ -1,0 +1,238 @@
+
+
+body{
+  font-family: 'Allerta', sans-serif;
+  margin: 0;
+
+}
+
+table{
+  width: 100%;
+}
+
+th{
+  background-color: #273b47;
+  color: white;
+  padding: 10px 20px;
+  text-align: left;
+}
+
+td{
+  padding: 20px;
+}
+
+table, th, td{
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+input, textarea{
+  outline: 0;
+}
+
+input:focus, textarea:focus{
+  background: lightgray;
+}
+
+.container {
+  width: 800px;
+  margin: auto;
+  position: relative;
+}
+
+.background{
+  background-image: url(../images/background.png);
+  background-size: cover;
+}
+
+.button {
+  border-radius: 8px;
+  border: none;
+  background: #fd324e;
+  color: white;
+  padding: 10px 15px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 18px;
+  background: linear-gradient(to left, #fe344e, #ff7250);
+}
+
+.title{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 70px;
+  margin-bottom: 0;
+  margin-top: 70px;
+}
+
+.title span{
+  text-decoration: underline;
+}
+
+.title-a{
+  font-size: 24px;
+  margin-top: 0;
+}
+
+.title-b{
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.guitars{
+  color: #1F313C;
+  margin-bottom: 60px;
+}
+
+.guitars h2{
+  font-size: 35px;
+}
+
+.front{
+  color: white;
+  padding: 20px;
+  height: 500px;
+}
+
+.front button{
+  margin-bottom: 70px;
+}
+
+.menu{
+  font-size: 24px;
+  display: inline-block;
+  position: absolute;
+  right: 0;
+}
+
+.menu li:before{
+  content: '∘';
+  font-size: 30px;
+  line-height: 20px;
+  color: white;
+}
+
+.menu li{
+  display: inline-block;
+  margin-left: 30px;
+}
+
+.menu a{
+  color: white;
+  text-decoration: none;
+}
+
+.logo{
+  display: inline-block;
+  margin-left: 0;
+}
+
+.guitar ol{
+  padding: 0;
+}
+
+.right {
+  float: right;
+  position: relative;
+  top: -127px;
+}
+
+.left{
+  float: left;
+  position: relative;
+}
+
+.guitar {
+  margin: 10px 10px 40px 10px;
+  padding: 10px;
+  border: 1px solid #1F313C;
+  border-radius: 8px;
+}
+
+.guitar.b{
+  height: 190px;
+}
+
+.guitar-container-a{
+  padding-left: 20px;
+}
+
+.guitar-container-b{
+  margin-left: 370px;
+  position: relative;
+  bottom: 90px;
+}
+
+.header {
+  position: relative;
+}
+
+.footer{
+  background: #273b47;
+  padding: 50px 20px;
+}
+
+.contact{
+  display: flex;
+  width: 300px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.contact img{
+  display: block;
+}
+
+.contact strong{
+  display: block;
+}
+
+.contact a{
+  color: white;
+  display: inline-block;
+  text-decoration: none;
+  margin: 10px 10px 10px 0;
+}
+
+.footer .container{
+  display: flex;
+  justify-content: space-between;
+}
+
+.form{
+  display: flex;
+  width: 400px;
+  color: white;
+}
+
+.form-col1, .form-col2{
+  display: flex;
+  flex-direction: column;
+}
+
+.form-col1{
+  margin-right: 15px;
+}
+
+.form-col2{
+  align-items: flex-start;
+}
+
+.form-col2 .button{
+  margin-top: 15px;
+}
+
+.interests label{
+  font-size: 12px;
+}
+
+.form label, .gender, .interests{
+  margin-bottom: 10px;
+}
+
+.gender{
+  margin-top: 10px;
+}
+
+.table{
+  margin: 50px 0;
+}
