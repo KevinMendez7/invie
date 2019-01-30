@@ -5,27 +5,29 @@
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=Allerta|Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   </head>
   <body>
     <section id="front" class="front background"> <!-- portada       -->
       <header id="header" class="header container">
-      <figure class="logo"> <!-- logotipo -->
-        <img src="./images/invie.png" width="186" height="60" alt="invie logotipo" />
-      </figure>
-      <nav class="menu">
-        <ul>
-          <li>
-            <a href="index.html">home</a>
-          </li>
-          <li>
-            <a href="#guitars">guitarras</a>
-          </li>
-          <li>
-            <a href="price.html">precios</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+        <figure class="logo"> <!-- logotipo -->
+          <img src="./images/invie.png" srcset="./images/invie.png x1 ./images/invie.png x2" width="186" height="60" alt="invie logotipo" />
+        </figure>
+        <span class="burguer-button icon-menu" id="burguer-button"></span>
+        <nav class="menu" id="menu">
+          <ul>
+            <li>
+              <a href="index.html">home</a>
+            </li>
+            <li>
+              <a href="#guitars">guitarras</a>
+            </li>
+            <li>
+              <a href="price.html">precios</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
       <div class="container">
         <h1 class="title">Guitarras <span>invie</span>sibles</h1>
         <h3 class="title-a">Se la estrella de rock que siempre quisiste ser</h3>
@@ -34,8 +36,13 @@
     </section>
     <section id="guitars" class="guitars container"> <!-- guitarras -->
       <h2>Nuestras guitarras</h2>
+      <div class="video-responsive-container">
+        <iframe class="video-responsive-src" width="560" height="315" src="https://www.youtube.com/embed/R1dW8M4EqYY" frameborder="0" allow="autoplay; encrypted-media; download" allowfullscreen></iframe>
+      </div>
+      <video src="video/320x240.ogg">
+      </video>
       <article class="guitar">
-        <img class="right" src="./images/invie-acustica.png" width="350" alt="invie acustica" />
+        <img class="right" data-src="./images/invie-acustica.png|./images/invie-acustica.png" width="350" alt="invie acustica" />
         <div class="guitar-container-a">
           <h3 class="title-b">Invie Acustica</h3>
           <ol>
@@ -46,7 +53,7 @@
         </div>
       </article>
       <article class="guitar b">
-        <img class="left" src="./images/invie-classic.png" width="350" alt="invie clasica" />
+        <img class="left" data-src="./images/invie-classic.png|./images/invie-classic.png" width="350" alt="invie clasica" />
         <div class="guitar-container-b">
           <h3 class="title-b">Invie Clasica</h3>
           <ol>
@@ -60,7 +67,7 @@
     <footer class="footer">
       <div class="container">
         <div class="contact">
-          <img src="./images/invie-white.png" alt="white logo">
+          <img data-src="./images/invie-white.png|./images/invie-white.png" alt="white logo">
           <a href="tel:+502 55094839"> <strong>Telefono</strong> <span>55094839</span> </a>
           <a href="mailto:contacto@invie.com"><strong>E-mail</strong> <span>contacto@invie.com</span> </a>
         </div>
@@ -102,5 +109,33 @@
         </form>
       </div>
     </footer>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.min.js">
+    </script>
+    <script type="text/javascript">
+
+      let media = window.matchMedia('(max-width: 500px)')
+      const $burguerButton = document.getElementById("burguer-button")
+      const $menu = document.getElementById("menu")
+      const toggleMenu = () => {
+        $menu.classList.toggle('active')
+      }
+
+      const mediaQuery = () =>{
+        if(media.matches){
+          console.log('hoola')
+          $burguerButton.addEventListener('touchstart', toggleMenu)
+        } else {
+          $burguerButton.removeEventListener('touchstart', toggleMenu)
+          console.log('adios')
+        }
+      }
+      mediaQuery()
+      media.addListener(mediaQuery)
+
+      var lazy = new Blazy({
+          selector: 'img'
+      })
+
+    </script>
   </body>
 </html>
